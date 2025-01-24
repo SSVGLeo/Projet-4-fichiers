@@ -1,0 +1,1 @@
+Voici le Projet 4 de la formation OpenClassroom qui va porter sur le restaurant Ohmyfood avec deux versions et en MobileFirst. Les animations css seront la clé de ce projet et devront être faites avec du Scss qui sera formater en css.
