@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: $secondary-txt-color;
+    color: $btn-txt-color;
+    width: 100%;
+    height: 100%;
+    max-width: 325px;
+    max-height: 186px;
+    padding: 22px 25px;
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        max-height: 100px;
+        height: 100%;
+    }
+    &__content {
+        display: flex;
+        gap: 11px;
+        max-height: 19px;
+    }
+    &__logo {
+        font-size: 13px;
+    }
+    &__text {
+        font-weight: 500;
+    }
+}

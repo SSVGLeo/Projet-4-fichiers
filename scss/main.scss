@@ -1,4 +1,38 @@
+@import './utils/variables';
+
+@import './components/buttons.scss';
+
+@import './layouts/explanation';
+@import './layouts/header';
+@import './layouts/footer';
+@import './layouts/main-dish';
+@import './layouts/dessert';
+@import './layouts/menu';
+@import './layouts/restaurants';
+@import './layouts/start-dish';
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+}
+
+.ohmyfood {
+    font-family: 'Shrikhand', 'sans-serif';
+    color: $btn-txt-color;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0px;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    display: block;
+    text-decoration: none;
 }

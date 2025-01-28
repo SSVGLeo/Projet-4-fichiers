@@ -1,0 +1,25 @@
+.restaurants {
+    background-color: $main-bg-color;
+    height: auto;
+    max-height: 1204px;
+
+    &__title {
+        padding-top: 54px;
+        margin-left: 20px;
+        margin-bottom: 42px;
+        margin-top: 0px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        margin: 0px 18px 66px 17px;
+        height: 100%;
+        max-height: 1058px;
+    }
+
+    @include restaurants_box_new;
+
+}
