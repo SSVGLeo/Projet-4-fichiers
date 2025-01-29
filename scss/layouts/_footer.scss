@@ -4,17 +4,20 @@
     gap: 16px;
     background-color: $secondary-txt-color;
     color: $btn-txt-color;
-    width: 100%;
+    width: 88.238%;
     height: 100%;
-    max-width: 325px;
     max-height: 186px;
-    padding: 22px 25px;
+    padding: 22px 5.9%;
     &__box {
         display: flex;
         flex-direction: column;
         gap: 7px;
         max-height: 100px;
         height: 100%;
+        & a {
+            text-decoration: none;
+            color: $btn-txt-color;
+        }
     }
     &__content {
         display: flex;
@@ -26,5 +29,20 @@
     }
     &__text {
         font-weight: 500;
+    }
+}
+
+
+@media all and (min-width: 1440px) {
+    .footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1(1fr);
+        &__box {
+            flex-direction: row;
+        }
+    }
+    .ohmyfood {
+        width: 100%;
     }
 }

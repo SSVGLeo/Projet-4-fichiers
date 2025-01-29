@@ -1,5 +1,9 @@
 // Creation of the intro section with the text and its style
 .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: $main-bg-color;
   margin-top: -10px;
   padding: 25px;
@@ -8,20 +12,18 @@
   max-height: 347px;
   // The title and its style
   &__title {
-    margin: 14px 33px 0px 17px;
+    margin: 14px 30px 0px 30px;
     &--style {
       margin: 0px;
       text-align: center;
       font-weight: 700;
       font-size: 24px;
-      max-width: 275px;
       max-height: 68px;
     }
   }
   // The subtitle and its style
   &__subtitle {
-    margin: 10px 1px 2px 9px;
-    max-width: 315px;
+    margin: 10px 5px 2px 5px;
     max-height: 46px;
     &--style {
       color: $secondary-txt-color;
@@ -102,6 +104,9 @@
     &__text {
       font-size: 16px;
       font-weight: 500;
+      width: 80%;
+      display: flex;
+      justify-content: center;
     }
     &__logo1 {
       color: $third-txt-color;
@@ -112,3 +117,33 @@
   }
 }
 
+
+@media all and (min-width: 1440px) {
+  .intro {
+    padding: 0px;
+    &__title {
+      margin: 30px 397.5px 18px 397.5px;
+      &--style {
+        max-width: 645px;
+        font-size: 40px;
+      }
+    }
+    &__subtitle {
+      &--style {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .explanation {
+    padding: 50px 207px 50px 187px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &__title {
+      width: 100%;
+    }
+    &__card {
+      width: 31.714%;
+    }
+  }
+}
