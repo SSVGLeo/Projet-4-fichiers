@@ -118,11 +118,11 @@
 }
 
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1024px) {
   .intro {
     padding: 0px;
     &__title {
-      margin: 30px 397.5px 18px 397.5px;
+      margin: 30px 175px 18px 175px;
       &--style {
         max-width: 645px;
         font-size: 40px;
@@ -136,12 +136,27 @@
   }
 
   .explanation {
-    padding: 50px 207px 50px 187px;
+    padding: 50px 100px 50px 100px;
     flex-direction: row;
     flex-wrap: wrap;
     &__title {
       width: 100%;
     }
+    &__card {
+      width: 31.31%;
+    }
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .intro {
+    &__title {
+      margin: 30px 397.5px 18px 397.5px;
+    }
+    }
+
+  .explanation {
+    padding: 50px 207px 50px 187px;
     &__card {
       width: 31.714%;
     }

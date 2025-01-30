@@ -23,11 +23,11 @@
     @include restaurants_box_new;
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1024px) {
     .restaurants {
         display: flex;
         flex-direction: column;
-        padding: 30px 180px;
+        padding: 30px 100px;
         &__title {
             padding: 0px;
             margin: 0px;
@@ -37,10 +37,19 @@
             margin: 0px;
             flex-direction: row;
             flex-wrap: wrap;
-            gap: 50px 100px;
+            gap: 50px 9.26%;
         }
         &__box {
             width: 45.37%;
+        }
+    }
+}
+
+@media all and (min-width: 1440px) {
+    .restaurants {
+        padding: 30px 180px;
+        &__cards {
+            gap: 50px 100px;
         }
     }
 }

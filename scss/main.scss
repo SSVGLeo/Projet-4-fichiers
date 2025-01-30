@@ -1,15 +1,12 @@
-@import './utils/variables';
+@import './abstracts/variables.scss';
 
 @import './components/buttons.scss';
 
 @import './layouts/explanation';
 @import './layouts/header';
 @import './layouts/footer';
-@import './layouts/main-dish';
-@import './layouts/dessert';
 @import './layouts/menu';
 @import './layouts/restaurants';
-@import './layouts/start-dish';
 
 html {
     scroll-behavior: smooth;
@@ -35,4 +32,5 @@ p {
 a {
     display: block;
     text-decoration: none;
+    color: black;
 }

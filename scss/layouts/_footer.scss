@@ -32,17 +32,26 @@
     }
 }
 
-
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1024px) {
     .footer {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1(1fr);
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-top: 64px;
+        width: auto;
         &__box {
             flex-direction: row;
+            width: 100%;
+            max-width: 661px;
+            gap: 12px;
+        }
+        &__space {
+            margin-right: 50px;
         }
     }
     .ohmyfood {
+        order: 2;
+        margin-left: auto;
         width: 100%;
+        max-width: 120px;
     }
 }

@@ -2,12 +2,16 @@
 .header {
     display: flex;
     justify-content: center;
+    position: relative;
     & .fa-arrow-left {
+        position: absolute;
+        left: 1px;
         margin: 15px;
-        max-width: 30px;
-        max-height: 30px;
-        font-size: 30px;
-        display: none;
+        height: 100%;
+        width: 100%;
+        max-width: 20px;
+        max-height: 17px;
+        font-size: 19px;
     }
     // style of the image, its meant to be in the middle
     &__img {
@@ -42,7 +46,7 @@
     }
 }
 
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1024px) {
     .header {
         &__img {
             max-width: 200px;
