@@ -13,12 +13,11 @@
         display: flex;
         flex-direction: column;
         background-color: $main-bg-color;
-        width: 100%;
         height: auto;
-        max-height: 1201px;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
         margin-top: -60px;
+        gap: 10px;
     }
 
     &__header {
@@ -26,7 +25,7 @@
         justify-content: space-between;
         align-items: center;
         gap: 10px;
-        margin: 32px 17px 30px 17px;
+        margin: 32px 17px 10px 17px;
         & h1 {
             margin: 0px;
             font-size: 28px;
@@ -64,13 +63,14 @@
 
     &__box {
         margin: 12px 13px;
-        width: 93%;
-        height: 260px;
+        height: auto;
 
         @include meal_card; 
     }
     &__title {
+        animation: title_slide 1s ease-in-out both;
         & h2 {
+            text-overflow: hidden;
             font-size: 16px;
             font-weight: 300;
             margin: 0px;
@@ -81,7 +81,6 @@
             top: 27px;
             gap: 0px;
             border: 2px solid $new-bg-color;
-            opacity: 0px;
         }
     }
 
@@ -89,8 +88,54 @@
         @include button;
     }
 }
+@keyframes title_slide {
+    0%  {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
 
 #menu__button {
     width: auto;
     max-width: none;
+}
+
+@media all and (min-width: 768px) {
+    .menu {
+        &__container {
+            margin-left: 5%;
+            margin-right: 5%;
+            padding: 0px 2.5%;
+        }
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .menu {
+        &__container {
+            margin-left: 13.37%;
+            margin-right: 13.37%;
+            padding: 0px 10%;
+        }
+        &__header {
+            justify-content: center;
+        }
+    }
+}
+
+@media all and (min-width: 1444px) {
+    .menu {
+        &__container {
+            margin-left: 192.5px;
+            margin-right: 192.5px;
+            padding: 0px 14.6%;
+        }
+    }
 }

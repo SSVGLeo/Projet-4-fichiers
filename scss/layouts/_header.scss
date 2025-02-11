@@ -2,6 +2,7 @@
 .header {
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
     & .fa-arrow-left {
         position: absolute;
@@ -12,6 +13,12 @@
         max-width: 20px;
         max-height: 17px;
         font-size: 19px;
+    }
+    &__back {
+        position: absolute;
+        top: 0px;
+        width: 20px;
+        height: 17px;
     }
     // style of the image, its meant to be in the middle
     &__img {
@@ -27,7 +34,7 @@
     box-shadow: 0px 4px 4px rgba($color: #000000, $alpha: 0.25);
     max-height: 50px;
     &__box {
-        margin: 0px 118.5px 15.5px 118.5px;
+        margin: 0px 0px 15.5px 0px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -46,7 +53,7 @@
     }
 }
 
-@media all and (min-width: 1024px) {
+@media all and (min-width: 768px) {
     .header {
         &__img {
             max-width: 200px;

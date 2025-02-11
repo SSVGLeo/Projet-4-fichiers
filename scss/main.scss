@@ -34,3 +34,73 @@ a {
     text-decoration: none;
     color: black;
 }
+
+.animation {
+    position: absolute;
+    width: 100%;
+    height: 500%;
+    max-height: 1396px;
+    background-color: $main-bg-color;
+    animation: intro 2.1s ease-in-out both;
+    z-index: 4;
+}
+
+@keyframes intro {
+    0%, 80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+
+.container_anim {
+    width: 100%;
+    position: absolute;
+    top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.load {
+    position: absolute;
+    width: $size*10;
+    height: $size*7.5;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 4;
+    animation: disapear 2.1s ease-in-out both;
+    &__bar {
+        background: linear-gradient(-180.33deg, #ff79da -11.44%, #9356dc 123.93%);
+        height: 100%;
+        width: $size;
+        animation: bars $anim-dur ease-in-out both;
+        @for $i from 1 through $num-bars {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+             }
+        }
+    }
+}
+
+@keyframes disapear {
+    0% {
+        display: flex;
+    }
+    100% {
+        display: none;
+    }
+}
+
+@keyframes bars {
+    0% {
+        transform: scaleY(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(1);
+        opacity: 0;
+    }
+}
