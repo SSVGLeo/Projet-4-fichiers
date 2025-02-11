@@ -500,7 +500,6 @@
   animation: title_slide 1s ease-in-out both;
 }
 .menu__title h2 {
-  text-overflow: hidden;
   font-size: 16px;
   font-weight: 300;
   margin: 0px;
@@ -691,7 +690,10 @@
   font-weight: 300;
 }
 .restaurants__container {
-  position: relative;
+  position: absolute;
+  z-index: 2;
+  bottom: 17px;
+  right: 12px;
   display: flex;
   justify-content: flex-end;
   width: 100%;

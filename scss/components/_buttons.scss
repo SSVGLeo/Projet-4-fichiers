@@ -129,7 +129,10 @@
   }
 
   &__container {
-    position: relative;
+    position: absolute;
+    z-index: 2;
+    bottom: 17px;
+    right: 12px;
     display: flex;
     justify-content: flex-end;
     width: 100%;
