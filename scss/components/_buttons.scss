@@ -12,6 +12,7 @@
     padding: 0px;
     border: 0px;
     width: 100%;
+    max-width: 218px;
     border-radius: 50px;
     text-align: center;
     box-sizing: border-box;
@@ -211,20 +212,10 @@
     }
 
     &__label {
-      display: flex;  
+      position: absolute;
       height: 100%;
       width: 100%;
       cursor: pointer;
-      & h1 {
-        font-size: 18px;
-        font-weight: 500;
-        margin: 0px;
-      }
-      & h2 {
-        font-size: 18px;
-        font-weight: 500;
-        margin: 0px;
-      }
     }
     &__label2 {
       position: absolute;
@@ -255,6 +246,11 @@
 
     &__text {
         width: 100%;
+        & h1 {
+          font-size: 18px;
+          font-weight: 500;
+          margin: 0px;
+        }
         & h1, & p {
             white-space: nowrap;
             overflow: hidden;
@@ -273,18 +269,23 @@
         position: absolute;
         right: 15px;
         bottom: 10px;
+        & h2 {
+          font-size: 18px;
+          font-weight: 500;
+          margin: 0px;
+        }
     }
 
     &__checkbox:checked ~ &__label2 {
         transform: translateX(0);
     }
 
-    &__checkbox:checked ~ &__label .menu__box__card__price {
+    &__checkbox:checked ~ .menu__box__card__price {
       animation: price_mouvement 0.35s ease-in-out both;
  
   }
 
-    &__checkbox:checked ~ &__label .menu__box__card__text {
+    &__checkbox:checked ~ .menu__box__card__text {
         width: calc(100% - 90px);
     }
   }

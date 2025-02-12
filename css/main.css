@@ -66,6 +66,7 @@
   padding: 0px;
   border: 0px;
   width: 100%;
+  max-width: 218px;
   border-radius: 50px;
   text-align: center;
   box-sizing: border-box;
@@ -426,20 +427,10 @@
   display: none;
 }
 .menu__box__card__label {
-  display: flex;
+  position: absolute;
   height: 100%;
   width: 100%;
   cursor: pointer;
-}
-.menu__box__card__label h1 {
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0px;
-}
-.menu__box__card__label h2 {
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0px;
 }
 .menu__box__card__label2 {
   position: absolute;
@@ -469,6 +460,11 @@
 .menu__box__card__text {
   width: 100%;
 }
+.menu__box__card__text h1 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0px;
+}
 .menu__box__card__text h1, .menu__box__card__text p {
   white-space: nowrap;
   overflow: hidden;
@@ -487,13 +483,18 @@
   right: 15px;
   bottom: 10px;
 }
+.menu__box__card__price h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0px;
+}
 .menu__box__card__checkbox:checked ~ .menu__box__card__label2 {
   transform: translateX(0);
 }
-.menu__box__card__checkbox:checked ~ .menu__box__card__label .menu__box__card__price {
+.menu__box__card__checkbox:checked ~ .menu__box__card__price {
   animation: price_mouvement 0.35s ease-in-out both;
 }
-.menu__box__card__checkbox:checked ~ .menu__box__card__label .menu__box__card__text {
+.menu__box__card__checkbox:checked ~ .menu__box__card__text {
   width: calc(100% - 90px);
 }
 .menu__title {
@@ -526,6 +527,7 @@
   padding: 0px;
   border: 0px;
   width: 100%;
+  max-width: 218px;
   border-radius: 50px;
   text-align: center;
   box-sizing: border-box;
@@ -578,8 +580,8 @@
   }
 }
 #menu__button {
-  width: auto;
   max-width: none;
+  margin: 27px 0px 32px 0px;
 }
 
 @media all and (min-width: 768px) {
