@@ -20,13 +20,15 @@
       src="https://kit.fontawesome.com/4b0d74bb96.js"
       crossorigin="anonymous"
     ></script>
-    <title>La palette du goût</title>
+    <title>La note enchantée</title>
   </head>
 
   <body>
+    <!-- Header de la page avec le logo de Ohmyfood, un bouton qui amène vers la page principal est ajouté -->
     <header>
       <div class="header">
-        <i class="fa-solid fa-arrow-left"><a href="../index.html" class="header__back"></a></i>
+        <i class="fa-solid fa-arrow-left"></i>
+        <a href="../index.html" class="fa-arrow-left"></a>
         <img
           class="header__img"
           src="../assets/images/logo/ohmyfood.png"
@@ -35,15 +37,18 @@
       </div>
     </header>
 
+    <!-- Affichage du menu du restaurants avec l'image en première, puis la carte qui dépasse légérement sur l'image, le titre et un bouton like
+     ensuite les entrées, plats et desserts qui possède chacun plusieurs éléments avec un nom une description et un prix.
+     Chaque élément est clicable et permet de l'ajouter à son panier, en cliquant une deuxième fois le plat est enlever du panier. -->
     <main class="menu">
       <img
         class="menu__img"
-        src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-        alt="Image d'un plat de La palette du goût"
+        src="../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+        alt="Image d'un plat de La note enchantée"
       />
       <div class="menu__container">
         <div class="menu__header">
-          <h1>La palette du goût</h1>
+          <h1>La note enchantée</h1>
           <div class="menu__heart">
             <input
               type="checkbox"
@@ -65,44 +70,54 @@
 
           <div class="menu__box__card menu__box__card--1">
             <input type="checkbox" id="toggle" class="menu__box__card__checkbox">
-              <div class=" menu__box__card__text">
-                <h1>Fricassée d'escargots</h1>
-                <p>Au piment d'Espelette</p> 
+            <label for="toggle" class="menu__box__card__label"></label>
+              <div class="menu__box__card__text">
+                <h1>Ravioles de foie gras </h1>
+                <p>Accompagnées de leur crème à la truffe</p>
               </div>
               <div class="menu__box__card__price">
                 <h2>25€</h2>
               </div>
-            <label for="toggle" class="menu__box__card__label">
-            </label>
             <label for="toggle" class="menu__box__card__label2"></label>
           </div>
 
           <div class="menu__box__card menu__box__card--2">
             <input type="checkbox" id="toggle2" class="menu__box__card__checkbox">
+            <label for="toggle2" class="menu__box__card__label"></label>
               <div class="menu__box__card__text">
-                <h1>Foie gras de canard mi-cuit</h1>
-                <p>Et ses copeaux de truffe noire</p>
+                <h1>Caviar osciètre </h1>
+                <p>Sur blini à la farine de blé noir</p>
               </div>
               <div class="menu__box__card__price">
                 <h2>35€</h2>
               </div>
-            <label for="toggle2" class="menu__box__card__label">
-            </label>
             <label for="toggle2" class="menu__box__card__label2"></label>
           </div>
 
           <div class="menu__box__card menu__box__card--3">
             <input type="checkbox" id="toggle3" class="menu__box__card__checkbox">
+            <label for="toggle3" class="menu__box__card__label"></label>
               <div class="menu__box__card__text">
-                <h1>Oeuf au plat</h1>
-                <p>Assaisonné à la truffe sur lit de caviar</p>
+                <h1>Homard et espuma de potiron</h1>
+                <p>Marinés aux zestes d'orange</p>
               </div>
               <div class="menu__box__card__price">
                 <h2>20€</h2>
               </div>
-            <label for="toggle3" class="menu__box__card__label">
-            </label>
             <label for="toggle3" class="menu__box__card__label2"></label>
+          </div>
+
+          <div class="menu__box__card menu__box__card--4">
+            <input type="checkbox" id="toggle4" class="menu__box__card__checkbox">
+            <label for="toggle4" class="menu__box__card__label"></label>
+              <div class="menu__box__card__text">
+                <h1>Foie gras de canard cuit entier</h1>
+                <p>Confiture de figue et pain toasté</p>
+              </div>
+              <div class="menu__box__card__price">
+                <h2>35€</h2>
+              </div>
+            <label for="toggle4" class="menu__box__card__label2"></label>
           </div>
         </div>
 
@@ -116,13 +131,12 @@
             <input type="checkbox" id="toggle4" class="menu__box__card__checkbox">
             <label for="toggle4" class="menu__box__card__label"></label>
               <div class="menu__box__card__text">
-                <h1>Filet de boeuf aux herbes</h1>
-                <p>Accompagné de sa ribambelle de légumes</p>
+                <h1>Noix de coquilles Saint-Jacques</h1>
+                <p>Sur lit de purée de céleri-rave</p>
               </div>
               <div class="menu__box__card__price">
                 <h2>40€</h2>
               </div>
-            
             <label for="toggle4" class="menu__box__card__label2"></label>
           </div>
 
@@ -130,8 +144,8 @@
             <input type="checkbox" id="toggle5" class="menu__box__card__checkbox">
             <label for="toggle5" class="menu__box__card__label"></label>
               <div class="menu__box__card__text">
-                <h1>Parmentier de queue de boeuf</h1>
-                <p>À la truffe noire sur sa purée de panais</p>
+                <h1>Langoustine poêlée</h1>
+                <p>Purée de patate douce</p>
               </div>
               <div class="menu__box__card__price">
                 <h2>35€</h2>
@@ -143,8 +157,8 @@
             <input type="checkbox" id="toggle6" class="menu__box__card__checkbox">
             <label for="toggle6" class="menu__box__card__label"></label>
               <div class="menu__box__card__text">
-                <h1>Filet de turbot</h1>
-                <p>Aux agrumes</p>
+                <h1>Mijoté de queue de bœuf </h1>
+                <p>Et riz sauvage aux zestes de citron</p>
               </div>
               <div class="menu__box__card__price">
                 <h2>44€</h2>
@@ -163,8 +177,8 @@
             <input type="checkbox" id="toggle7" class="menu__box__card__checkbox">
             <label for="toggle7" class="menu__box__card__label"></label>
               <div class="menu__box__card__text">
-                <h1>Paris-Brest</h1>
-                <p>Revisité</p>
+                <h1>Macaron noisette et chocolat</h1>
+                <p>Glace au caramel brun et sel de Guérande</p>
               </div>
               <div class="menu__box__card__price">
                 <h2>18€</h2>
@@ -176,8 +190,8 @@
             <input type="checkbox" id="toggle8" class="menu__box__card__checkbox">
             <label for="toggle8" class="menu__box__card__label"></label>
               <div class="menu__box__card__text">
-                <h1>Macaron au chocolat d'exception</h1>
-                <p>Et glace à la vanille de Madagascar</p>
+                <h1>Baba au rhum revisité </h1>
+                <p>Avec son coulis de citron</p>
               </div>
               <div class="menu__box__card__price">
                 <h2>22€</h2>
@@ -189,8 +203,8 @@
             <input type="checkbox" id="toggle9" class="menu__box__card__checkbox">
             <label for="toggle9" class="menu__box__card__label"></label>
               <div class="menu__box__card__text">
-                <h1>Mousse au chocolat</h1>
-                <p>Au piment d'Espelette et à la truffe noire</p>
+                <h1>Tarte au citron meringuée </h1>
+                <p>Déstructurée</p>
               </div>
               <div class="menu__box__card__price">
                 <h2>23€</h2>
@@ -198,6 +212,7 @@
             <label for="toggle9" class="menu__box__card__label2"></label>
           </div>
         </div>
+
         <div class="menu__button" id="menu__button">
           <a href="#" id="link" class="menu__button--style">
               <p class="menu__button--text">Commander</p>
@@ -206,6 +221,7 @@
     </div>
     </main>
 
+    <!-- Pied de page avec Plusieurs options et le logo Ohmyfood. Contact renvoie vers une adresse mail -->
     <footer class="footer">
       <p class="ohmyfood">ohmyfood</p>
       <div class="footer__box">

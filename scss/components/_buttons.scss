@@ -1,4 +1,8 @@
+// Mixins utilisées sur le site
+
+// Mixin donnant le style aux boutons du site
 @mixin button {
+  // Les éléments dans le bouton seront au milieu de ce dernier et ont une taille maximal donnée
   display: flex;
   justify-content: center;
   margin: 27px 50px 32px 57px;
@@ -7,6 +11,7 @@
   max-width: 218px;
   max-height: 50px;
   &--style {
+    // Le bouton à une ombre et une couleur liear gradient définit, quand on hover sur le bouton la couleur et l'ombre change en 400ms
     position: relative;
     z-index: 1;
     padding: 0px;
@@ -43,6 +48,7 @@
     }
   }
   &--text {
+    // Style des éléments text présent dans le bouton
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -56,18 +62,22 @@
   }
 }
 
+// Mixin qui crée le style de l'étiquette nouveau des restaurants
 @mixin new {
+  // L'étiquette passe devant le reste des éléments de la carte
   z-index: 1;
   max-width: 80px;
   max-height: 29px;
   width: 100%;
   height: 100%;
+  // Couleur de fond verte et le text est blanc
   background: $new-bg-color;
   color: $new-txt-color;
   margin-top: 13px;
   position: absolute;
   right: 15px;
   &--style {
+    // Taille donner au text
     font-size: 14px;
     font-weight: 500;
     padding: 7px 9.6px 6px 9px;
@@ -75,7 +85,9 @@
   }
 }
 
+// Mixin qui donne un style à chaque carte d'un restaurant
 @mixin restaurants_box_new {
+  // On donne une taille, une couleur et une façon de gérer les éléments enfants de chaque box
   &__box {
     position: relative;
     display: flex;
@@ -86,6 +98,7 @@
     border-radius: 15px;
     background-color: $btn-txt-color;
 
+    // Style donner à la partie qui contiendra l'image de la box
     &__content1 {
       display: flex;
       border-radius: 15px 15px 0px 0px;
@@ -94,6 +107,7 @@
       max-height: 231px;
     }
 
+    // Image de chaque restaurant et les dimensions qu'elle doit prendre dans la box
     &__img {
       box-sizing: border-box;
       border-radius: 15px 15px 0px 0px;
@@ -105,15 +119,18 @@
       object-fit: cover;
     }
 
+    // Etiquette nouveau à inclure ou non en fonction du restaurant
     &__new {
       @include new;
     }
 
+    // Partie qui va gérer le style du text de la box
     &__content2 {
       display: flex;
       max-height: 77px;
     }
 
+    // Style du text dans la box, l'un pour le titre et l'autre pour la description
     &__text {
       width: 100%;
       margin: 16px 13px 12px 13px;
@@ -129,7 +146,9 @@
     }
   }
 
+  // Partie qui va gérer le coeur qui va like le restaurant
   &__container {
+    // Dimension du coeur et de sa façon de se placer par rapport aux autres éléments
     position: absolute;
     z-index: 2;
     bottom: 17px;
@@ -139,6 +158,7 @@
     width: 100%;
     max-width: 21px;
     padding: 22px 25px 32px 13px;
+    // Style donner au coeur
     & .fa-heart::before,
     .fa-heart {
       font-size: 21px;
@@ -149,6 +169,7 @@
       max-width: 22px;
       max-height: 21px;
     }
+    // Deuxième coeurs coloré qui s'affiche seulement après validation de la checkbox
     & .fa-solid {
       display: none;
       background: transparent;
@@ -156,10 +177,11 @@
     }
     & .fa-regular {
       color: $secondary-txt-color;
-      // background: red;
       transition: all 200ms ease-in-out;
     }
   }
+
+  // Checkbox qui va serir à jouer l'animation mais qui est invisible pour éviter de surcharger la page
   &__checkbox {
     margin: 0px;
     width: 100%;
@@ -167,6 +189,7 @@
     max-width: 21px;
     display: none;
   }
+  // Si la checkbox est checked et enfant de restaurants label alors le premier coeur disparait et laisse place au deuxième qui est coloré
   &__checkbox:checked + .restaurants__label {
     & .fa-solid,
     & .fa-solid::before {
@@ -188,8 +211,10 @@
   }
 }
 
+// Mixin qui définit le style de chaque carte d'un plat
 @mixin meal_card {
   &__card {
+    // On donne les dimensions et la façon de gérer les éléments de chaque carte
     margin: 12px 0px;
     position: relative;
     height: 100%;
@@ -200,6 +225,7 @@
     display: flex;
     align-items: center;
     padding: 13.5px 15px;
+    // Ici on a l'animation de chaque carte, on a délay de l'animation qui augmente pour chaque carte
     animation: cards 1s ease-in-out both;
     @for $i from 1 through $num-cards {
       &--#{$i} {
@@ -207,16 +233,21 @@
       }
     }
 
+    // Checkbox qui va servir à jouer l'animation mais qui n'a pas besoin d'être affiché
     &__checkbox {
       display: none;
     }
 
     &__label {
+      // Label qui sert d'endroit pour cliquer et qui n'a pas de valeur visuel
       position: absolute;
       height: 100%;
       width: 100%;
+      // Le curseur pointe quand on est sur le label
       cursor: pointer;
     }
+
+    // Partie qui apparait et disparait quand on valide ou pas la checkbox
     &__label2 {
       position: absolute;
       display: flex;
@@ -224,14 +255,17 @@
       align-items: center;
       width: 59px;
       height: 100%;
+      // Dimensions prédéfinis et couleur verte
       background-color: $new-bg-color;
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
       right: 0;
+      // Il pivote en dehors et dans la div en fonction de checkbox
       transform: translateX(100%);
       transition: transform 0.35s ease-in-out;
       cursor: pointer;
 
+      // Logo de validation FontAwesome
       &::after {
         content: "\f00c";
         font-family: "Font Awesome 5 Free";
@@ -244,6 +278,7 @@
       }
     }
 
+    // Style du text qui est présent dans chaque carte, avec un titre et une description
     &__text {
         width: 100%;
         & h1 {
@@ -252,6 +287,7 @@
           margin: 0px;
         }
         & h1, & p {
+          // Quand le text ne tient pas dans l'espace alloué alors il disparait et fait apparaitre des ellipsis
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -262,9 +298,11 @@
             font-size: 14.7px;
         }
     }
+    // Style que l'on donne au prix de chaque carte
     &__price {
         display: flex;
         align-items: flex-end;
+        // Quand la checkbox se valide et que la validation apparait alors le prix se décale pour lui laisser de la place
         transform: translateX(0px);
         position: absolute;
         right: 15px;
@@ -291,6 +329,7 @@
   }
 }
 
+// Animation de chaque carte au démarrage de la page d'un restaurant
 @keyframes cards {
   0% {
     transform: translateX(-100%);
@@ -304,6 +343,7 @@
   }
 }
 
+// Animation du mouvement du prix quand la partie validation arrive
 @keyframes price_mouvement {
   0% {
     transform: translateX(0%);
