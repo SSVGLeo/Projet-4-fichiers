@@ -715,7 +715,7 @@
 .restaurants__container .fa-solid {
   display: none;
   background: transparent;
-  transition: all 1200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 .restaurants__container .fa-regular {
   color: #353535;
